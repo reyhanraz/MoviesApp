@@ -1,0 +1,54 @@
+PODS:
+  - Alamofire (5.6.1)
+  - Nuke (9.5.0)
+  - RxBlocking (6.5.0):
+    - RxSwift (= 6.5.0)
+  - RxCocoa (6.5.0):
+    - RxRelay (= 6.5.0)
+    - RxSwift (= 6.5.0)
+  - RxNuke (2.0.1):
+    - Nuke (~> 9.0)
+    - RxSwift (~> 6.0)
+  - RxRelay (6.5.0):
+    - RxSwift (= 6.5.0)
+  - RxSwift (6.5.0)
+  - RxTest (6.5.0):
+    - RxSwift (= 6.5.0)
+  - youtube-ios-player-helper (1.0.4)
+
+DEPENDENCIES:
+  - Alamofire
+  - Nuke
+  - RxBlocking (= 6.5.0)
+  - RxCocoa (= 6.5.0)
+  - RxNuke
+  - RxSwift (= 6.5.0)
+  - RxTest (= 6.5.0)
+  - youtube-ios-player-helper
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Nuke
+    - RxBlocking
+    - RxCocoa
+    - RxNuke
+    - RxRelay
+    - RxSwift
+    - RxTest
+    - youtube-ios-player-helper
+
+SPEC CHECKSUMS:
+  Alamofire: 87bd8c952f9a4454320fce00d9cc3de57bcadaf5
+  Nuke: 6f400a4ea957e09149ec335a3c6acdcc814d89e4
+  RxBlocking: 04b5fd28bb5ea49f7d64b80db8bbfe50d9cc1c7d
+  RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
+  RxNuke: 23175fb4b7cda4e3aa453588d895198ccf88f5ab
+  RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
+  RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
+  RxTest: eb2d23adefc5a5ebf5779c7792fa3edfe6ebcc17
+  youtube-ios-player-helper: e9b97535e816db3152179d84d999bc1807ecd689
+
+PODFILE CHECKSUM: 02ab797dd1d6fd6e7574db512cec91ae9ae67956
+
+COCOAPODS: 1.11.2
