@@ -13,7 +13,8 @@ struct APIConfig{
     static let baseURL = "https://api.themoviedb.org/3"
     
     //MARK: - EndPoint
-    
+    static let requestToken = "/authentication/token/new"
+    static let createSession = "/authentication/session/new"
     let getVideoResource = "/movie/338953/videos"
     let youtube = "https://www.youtube.com/embed/Fo6TfHkLW6Y"
     

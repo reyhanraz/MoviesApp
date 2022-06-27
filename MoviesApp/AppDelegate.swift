@@ -6,14 +6,26 @@
 //
 
 import UIKit
+import RxSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    private let _disposeBag = DisposeBag()
+    var preference = Preference()
 
 
+    lazy var tokenViewModel = ViewModel(service: RequestTokenAPI())
+    lazy var sessionViewmodel = ViewModel(service: CreateSessionAPI())
 
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        binding()
+        
+        tokenViewModel.execute(request: Request())
+        
         return true
     }
 
@@ -29,6 +41,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the user discards a scene session.
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
+    }
+    
+    func binding(){
+        tokenViewModel.result.drive(onNext: { result in
+            guard let requestToken = result.request_token else { return }
+            self.preference.requestToken = result.request_token
+            self.sessionViewmodel.execute(request: CreateSessionRequest(request_token: requestToken))
+        }).disposed(by: _disposeBag)
+        
+        sessionViewmodel.result.drive(onNext: { result in
+            self.preference.sessionID = result.session_id
+        }).disposed(by: _disposeBag)
     }
 
 

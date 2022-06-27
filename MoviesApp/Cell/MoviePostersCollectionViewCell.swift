@@ -22,7 +22,7 @@ class MoviePostersCollectionViewCell: UICollectionViewCell {
         let v = UILabel()
         
         v.clipsToBounds = true
-        v.textAlignment = .center
+        v.textAlignment = .left
         v.numberOfLines = 0
         v.font = v.font.withSize(14)
         v.translatesAutoresizingMaskIntoConstraints = false
@@ -47,13 +47,12 @@ class MoviePostersCollectionViewCell: UICollectionViewCell {
         NSLayoutConstraint.activate([
             imgCover.topAnchor.constraint(equalTo: contentView.topAnchor),
             imgCover.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            imgCover.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            imgCover.heightAnchor.constraint(equalToConstant: self.frame.width / 2 * 3),
-            
-            titleLabel.topAnchor.constraint(equalTo: imgCover.bottomAnchor),
-            titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            imgCover.widthAnchor.constraint(equalToConstant: 150),
+            imgCover.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+
+            titleLabel.centerYAnchor.constraint(equalTo: imgCover.centerYAnchor),
+            titleLabel.leadingAnchor.constraint(equalTo: imgCover.trailingAnchor, constant: 16),
             titleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            titleLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
             ])
     }
     

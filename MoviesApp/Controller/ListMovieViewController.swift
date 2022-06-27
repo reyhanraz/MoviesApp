@@ -17,11 +17,15 @@ class ListMovieViewController: BaseViewController {
     let viewModel = MovieListViewModel(service: MovieAPI())
     private var _request = Request(page: 1)
     private var _itemsCount = 0
+    
+    let profileButton = UIBarButtonItem(image: UIImage(systemName: "person.circle"), style: .plain, target: self, action: nil)
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         title = "Movies"
+        
+        navigationItem.rightBarButtonItem = profileButton
         
         refresher = UIRefreshControl()
         refresher.addTarget(self, action: #selector(loadData), for: .valueChanged)
@@ -30,7 +34,6 @@ class ListMovieViewController: BaseViewController {
         
         binding()
         
-        // Do any additional setup after loading the view.
         loadData()
     }
     
@@ -47,26 +50,19 @@ class ListMovieViewController: BaseViewController {
         let layout = UICollectionViewFlowLayout()
         layout.minimumLineSpacing = 10
         layout.scrollDirection = .vertical
-        let collectionViewInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
                 
-        let marginsAndInset = collectionViewInset.left + collectionViewInset.right + layout.minimumInteritemSpacing * CGFloat(3 - 1)
-        let itemWidth = ((UIScreen.main.bounds.size.width - marginsAndInset) / CGFloat(3)).rounded(.down)
+        let itemWidth = UIScreen.main.bounds.size.width
         
-        layout.itemSize = CGSize(width: itemWidth, height: 250)
-                
-        let max = 3
-        
-        let marginsAndInsets = (collectionViewInset.right + collectionViewInset.left) / 2 + layout.minimumInteritemSpacing * CGFloat(max - 1)
-        let totalCellWidth = layout.itemSize.width * CGFloat(max)
-        
-        let inset = (UIScreen.main.bounds.size.width - (totalCellWidth + marginsAndInsets)) / 2
-        
-        layout.sectionInset = UIEdgeInsets(top: collectionViewInset.top, left: inset, bottom: collectionViewInset.bottom, right: inset)
+        layout.itemSize = CGSize(width: itemWidth, height: 200)
         
         collectionView.setCollectionViewLayout(layout, animated: true)
     }
     
     private func binding(){
+        profileButton.rx.tap.subscribe(onNext: { _ in
+            let vc = AccountViewController()
+            self.navigationController?.pushViewController(vc, animated: true)
+        }).disposed(by: disposeBag)
         viewModel.result.drive(collectionView.rx.items(cellIdentifier: _cellIdentifier, cellType: MoviePostersCollectionViewCell.self)){ row, model, cell in
             cell.setupContent(imageUrl: model.posterPath, movieTitle: model.title)
         }.disposed(by: disposeBag)

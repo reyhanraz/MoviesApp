@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		2FAB69BD850D20A3795F7EFD /* Pods_MoviesApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68698C413C7969DE3B1F3A8B /* Pods_MoviesApp.framework */; };
+		4BEB91CC28694CA800E51F9A /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEB91CB28694CA800E51F9A /* Response.swift */; };
+		4BEB91CE28694D2200E51F9A /* CreateSessionAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEB91CD28694D2200E51F9A /* CreateSessionAPI.swift */; };
+		4BEB91D028694EB400E51F9A /* RequestTokenAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEB91CF28694EB400E51F9A /* RequestTokenAPI.swift */; };
+		4BEB91D22869513000E51F9A /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEB91D12869513000E51F9A /* ViewModel.swift */; };
+		4BEB91D4286951EE00E51F9A /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEB91D3286951EE00E51F9A /* Status.swift */; };
+		4BEB91D72869588800E51F9A /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEB91D52869588800E51F9A /* AccountViewController.swift */; };
+		4BEB91D82869588800E51F9A /* AccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BEB91D62869588800E51F9A /* AccountViewController.xib */; };
+		4BEB91DA28695A8A00E51F9A /* Preference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEB91D928695A8A00E51F9A /* Preference.swift */; };
 		619CD2C99A87AB662069E9CC /* Pods_MoviesApp_MoviesAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0204A8A91E35F0D913C3DFF8 /* Pods_MoviesApp_MoviesAppUITests.framework */; };
 		6886C4A92859AB6300F4AC29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6886C4A82859AB6300F4AC29 /* AppDelegate.swift */; };
 		6886C4AB2859AB6300F4AC29 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6886C4AA2859AB6300F4AC29 /* SceneDelegate.swift */; };
@@ -74,6 +82,14 @@
 		3320C95B091F43BE02DA83C5 /* Pods-MoviesApp-MoviesAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoviesApp-MoviesAppUITests.release.xcconfig"; path = "Target Support Files/Pods-MoviesApp-MoviesAppUITests/Pods-MoviesApp-MoviesAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		3EAE97B9D2A08F5923C15C56 /* Pods-MoviesAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoviesAppTests.release.xcconfig"; path = "Target Support Files/Pods-MoviesAppTests/Pods-MoviesAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		44F54C9472CA67A81FDEE138 /* Pods_MoviesAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoviesAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BEB91CB28694CA800E51F9A /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		4BEB91CD28694D2200E51F9A /* CreateSessionAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSessionAPI.swift; sourceTree = "<group>"; };
+		4BEB91CF28694EB400E51F9A /* RequestTokenAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestTokenAPI.swift; sourceTree = "<group>"; };
+		4BEB91D12869513000E51F9A /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		4BEB91D3286951EE00E51F9A /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+		4BEB91D52869588800E51F9A /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		4BEB91D62869588800E51F9A /* AccountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountViewController.xib; sourceTree = "<group>"; };
+		4BEB91D928695A8A00E51F9A /* Preference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preference.swift; sourceTree = "<group>"; };
 		68698C413C7969DE3B1F3A8B /* Pods_MoviesApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoviesApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6886C4A52859AB6300F4AC29 /* MoviesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoviesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6886C4A82859AB6300F4AC29 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -273,6 +289,9 @@
 			children = (
 				6886C4DE2859AFD400F4AC29 /* ServiceError.swift */,
 				6886C4EC2859EDF400F4AC29 /* ListResponseType.swift */,
+				4BEB91CB28694CA800E51F9A /* Response.swift */,
+				4BEB91D3286951EE00E51F9A /* Status.swift */,
+				4BEB91D928695A8A00E51F9A /* Preference.swift */,
 			);
 			path = Platform;
 			sourceTree = "<group>";
@@ -298,6 +317,8 @@
 				6886C4AE2859AB6300F4AC29 /* Main.storyboard */,
 				6886C503285A0D5900F4AC29 /* DetailMovieViewController.swift */,
 				6886C50D285B50C500F4AC29 /* DetailMovieViewController.xib */,
+				4BEB91D52869588800E51F9A /* AccountViewController.swift */,
+				4BEB91D62869588800E51F9A /* AccountViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -307,6 +328,7 @@
 			children = (
 				6886C506285A191300F4AC29 /* MovieListViewModel.swift */,
 				6886C508285A194700F4AC29 /* MovieDetailViewModel.swift */,
+				4BEB91D12869513000E51F9A /* ViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -317,6 +339,8 @@
 				6886C50B285A1B0200F4AC29 /* MovieAPI.swift */,
 				6886C50F285B52AD00F4AC29 /* ReviewAPI.swift */,
 				6886C511285B52C600F4AC29 /* VideoResourceAPI.swift */,
+				4BEB91CD28694D2200E51F9A /* CreateSessionAPI.swift */,
+				4BEB91CF28694EB400E51F9A /* RequestTokenAPI.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -437,6 +461,7 @@
 				6886C502285A0A9500F4AC29 /* YoutubePlayerTableViewCell.xib in Resources */,
 				6886C4FA285A007F00F4AC29 /* ReviewTableViewCell.xib in Resources */,
 				6886C4B22859AB6900F4AC29 /* Assets.xcassets in Resources */,
+				4BEB91D82869588800E51F9A /* AccountViewController.xib in Resources */,
 				6886C4B02859AB6300F4AC29 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -586,8 +611,10 @@
 				6886C4DD2859AD7F00F4AC29 /* ServiceType.swift in Sources */,
 				6886C512285B52C600F4AC29 /* VideoResourceAPI.swift in Sources */,
 				6886C4F22859F0FE00F4AC29 /* Video.swift in Sources */,
+				4BEB91DA28695A8A00E51F9A /* Preference.swift in Sources */,
 				6886C504285A0D5900F4AC29 /* DetailMovieViewController.swift in Sources */,
 				6886C4E12859B01100F4AC29 /* ServiceHelper.swift in Sources */,
+				4BEB91D22869513000E51F9A /* ViewModel.swift in Sources */,
 				6886C509285A194700F4AC29 /* MovieDetailViewModel.swift in Sources */,
 				6886C4E62859CA5C00F4AC29 /* MoviePostersCollectionViewCell.swift in Sources */,
 				6886C4E32859BE7200F4AC29 /* APIConfig.swift in Sources */,
@@ -598,14 +625,19 @@
 				6886C4F9285A007F00F4AC29 /* ReviewTableViewCell.swift in Sources */,
 				6886C4A92859AB6300F4AC29 /* AppDelegate.swift in Sources */,
 				6886C4E82859CCA900F4AC29 /* UIImageView+Nuke.swift in Sources */,
+				4BEB91D028694EB400E51F9A /* RequestTokenAPI.swift in Sources */,
+				4BEB91D4286951EE00E51F9A /* Status.swift in Sources */,
 				6886C50C285A1B0200F4AC29 /* MovieAPI.swift in Sources */,
 				6886C510285B52AD00F4AC29 /* ReviewAPI.swift in Sources */,
 				6886C4DF2859AFD400F4AC29 /* ServiceError.swift in Sources */,
 				6886C4F02859F0B700F4AC29 /* ListResponse.swift in Sources */,
 				6886C4FD285A031400F4AC29 /* MovieInfoTableViewCell.swift in Sources */,
+				4BEB91CE28694D2200E51F9A /* CreateSessionAPI.swift in Sources */,
 				6886C4EB2859E77900F4AC29 /* Movie.swift in Sources */,
+				4BEB91D72869588800E51F9A /* AccountViewController.swift in Sources */,
 				6886C4AB2859AB6300F4AC29 /* SceneDelegate.swift in Sources */,
 				6886C507285A191300F4AC29 /* MovieListViewModel.swift in Sources */,
+				4BEB91CC28694CA800E51F9A /* Response.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
